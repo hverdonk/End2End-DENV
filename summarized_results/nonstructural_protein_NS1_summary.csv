@@ -1,0 +1,5 @@
+gene,clade,N,T,dN/dS,sites,nt_conserved,aa_conserved,positive_sites,negative_sites,diff_sites,BUSTED_pval,BUSTED_omega3,BUSTED_prop_sites_in_omega3,RELAX_clade_K,RELAX_overall_pval
+nonstructural_protein_NS1,DENV1,1575,2.975618501436128,0.0718566120669924,352,1,31,1,299,36,0.5,1.028965047318714,2.969912857711721,analysis not completed,analysis not completed
+nonstructural_protein_NS1,DENV2,1423,2.9881411900131964,0.07795072379225557,352,1,31,10,296,30,0.5,1,1.071635563875673,analysis not completed,analysis not completed
+nonstructural_protein_NS1,DENV3,639,1.4787248379481066,0.06772476523928637,352,1,31,4,261,26,0.120295023435465,8.365727285765121,0.1332764293879283,analysis not completed,analysis not completed
+nonstructural_protein_NS1,DENV4,428,1.18889218174802,0.07097187777819568,352,1,31,1,228,26,0.5,1.001985774207543,0.0,analysis not completed,analysis not completed

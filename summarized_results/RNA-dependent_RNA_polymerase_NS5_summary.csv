@@ -1,0 +1,5 @@
+gene,clade,N,T,dN/dS,sites,nt_conserved,aa_conserved,positive_sites,negative_sites,diff_sites,BUSTED_pval,BUSTED_omega3,BUSTED_prop_sites_in_omega3,RELAX_clade_K,RELAX_overall_pval
+RNA-dependent_RNA_polymerase_NS5,DENV1,2466,2.9730135743079935,0.06816003981654684,899,1,0,26,765,84,0.5,1,1.385839573465693,analysis not completed,analysis not completed
+RNA-dependent_RNA_polymerase_NS5,DENV2,2308,3.210728439054871,0.06395269738352087,900,1,0,32,770,93,0.4634140005650715,1.074805064267967,5.586017733089775,analysis not completed,analysis not completed
+RNA-dependent_RNA_polymerase_NS5,DENV3,1068,1.5593015986798426,0.06477622475304476,900,1,0,6,477,83,0.5,4.462732171782491,0.0,analysis not completed,analysis not completed
+RNA-dependent_RNA_polymerase_NS5,DENV4,666,1.1616559168135978,0.05780071157277705,900,1,0,3,461,83,0.5,1.002330882617735,0.0,analysis not completed,analysis not completed

@@ -1,0 +1,58 @@
+gene,clade,site,composition,substitutions,majority_residue,diff_majority_residue,unique_aa,intensified_positive_selection,meme_marker,cfel_marker,prime_marker
+membrane_glycoprotein_precursor_prM,DENV1,1,H/2119,H:H/24,H,False,,False,-,"overall: 0.000, DENV1 vs DENV4: 0.000",-
+membrane_glycoprotein_precursor_prM,DENV1,2,L/2119,L:L/24,L,False,,False,-,"overall: 0.034, DENV1 vs DENV4: 0.030",-
+membrane_glycoprotein_precursor_prM,DENV1,3,T/2116 A/1,T:T/56 A:T/1,T,True,,False,-,"overall: 0.000, DENV1 vs DENV4: 0.000",-
+membrane_glycoprotein_precursor_prM,DENV1,15,K/2117 S/1 R/1 N/1,K:K/14 K:S/1 K:R/1 K:N/1,K,True,S,False,-,"overall: 0.037, DENV1 vs DENV2: 0.034",-
+membrane_glycoprotein_precursor_prM,DENV1,28,A/1924 V/142 T/50 I/2 G/2 S/1,A:V/29 A:T/13 A:A/5 I:V/2 A:G/2 A:S/1 V:V/1 I:T/1,A,True,V I A,True,0.027,"overall: 0.000, DENV1 vs DENV2: 0.027, DENV1 vs DENV3: 0.001, DENV1 vs DENV4: 0.003",-
+membrane_glycoprotein_precursor_prM,DENV1,72,T/2111 S/8 A/4,T:T/4 A:T/3 S:T/1,T,True,,False,-,overall: 0.017,-
+membrane_glycoprotein_precursor_prM,DENV1,73,W/2121 F/2,F:W/1,W,False,F,False,0.027,-,overall
+membrane_glycoprotein_precursor_prM,DENV1,88,D/1835 E/281 G/1 V/1 N/1 A/1,D:E/17 D:D/15 D:G/1 E:E/1 D:V/1 D:N/1 A:D/1,D,True,A,False,-,"overall: 0.035, DENV1 vs DENV3: 0.038, DENV1 vs DENV4: 0.047",overall
+membrane_glycoprotein_precursor_prM,DENV1,121,R/1696 K/421,K:R/28 R:R/5 K:K/2,R,True,,False,-,"overall: 0.000, DENV1 vs DENV2: 0.001, DENV1 vs DENV4: 0.004","overall,bipolar"
+membrane_glycoprotein_precursor_prM,DENV1,135,I/1934 M/145 T/34 V/7,I:T/15 I:M/15 I:V/5 I:I/1,I,True,T,False,-,"overall: 0.000, DENV1 vs DENV2: 0.000, DENV1 vs DENV3: 0.023, DENV1 vs DENV4: 0.022",-
+membrane_glycoprotein_precursor_prM,DENV1,137,L/1967 F/130 I/1,F:L/46 L:L/25 I:L/1 F:F/1,L,True,F I,False,-,"overall: 0.000, DENV1 vs DENV2: 0.006, DENV1 vs DENV3: 0.007, DENV1 vs DENV4: 0.020",overall
+membrane_glycoprotein_precursor_prM,DENV1,138,F/2116 L/1,F:F/30 F:L/1,F,True,,False,-,"overall: 0.017, DENV1 vs DENV2: 0.015",-
+membrane_glycoprotein_precursor_prM,DENV1,142,A/2054 T/34 V/31,A:A/36 A:V/15 A:T/8 V:V/1,A,True,V,False,-,"overall: 0.002, DENV1 vs DENV2: 0.003, DENV1 vs DENV4: 0.023",-
+membrane_glycoprotein_precursor_prM,DENV1,147,I/2108 T/5 L/1 V/1,I:I/28 I:T/3 I:L/1 I:V/1,I,True,V I T,False,-,DENV1 vs DENV2: 0.011,-
+membrane_glycoprotein_precursor_prM,DENV1,151,G/2118 E/1,G:G/15 E:G/1,G,True,E G,False,-,DENV1 vs DENV2: 0.019,-
+membrane_glycoprotein_precursor_prM,DENV2,1,H/2009 R/17 P/1,H:H/21 H:R/4 H:P/1,H,False,R,False,-,"overall: 0.000, DENV2 vs DENV4: 0.000",-
+membrane_glycoprotein_precursor_prM,DENV2,2,L/2025 I/1,L:L/52 I:L/1,L,False,I,False,-,"overall: 0.034, DENV2 vs DENV4: 0.029",-
+membrane_glycoprotein_precursor_prM,DENV2,3,T/2023 S/1,T:T/21 S:T/1,T,True,,False,-,"overall: 0.000, DENV2 vs DENV4: 0.000",-
+membrane_glycoprotein_precursor_prM,DENV2,15,R/1399 I/567 K/24 M/17 T/1 G/1,K:R/14 R:R/9 I:R/2 I:M/2 R:T/1 G:R/1 ?:R/1,R,True,I T M G,False,-,"overall: 0.037, DENV1 vs DENV2: 0.034",-
+membrane_glycoprotein_precursor_prM,DENV2,28,D/1467 N/537 G/4 E/2 K/1,D:D/13 D:N/8 N:N/8 D:E/2 D:K/1 D:G/1,D,True,D N K,False,-,"overall: 0.000, DENV1 vs DENV2: 0.027",-
+membrane_glycoprotein_precursor_prM,DENV2,55,L/2011 E/2 S/1,L:L/26 L:S/1 E:S/1,L,True,E S,False,0.000,-,overall
+membrane_glycoprotein_precursor_prM,DENV2,56,R/1964 K/46 Q/2 G/2,K:R/14 R:R/10 Q:R/1 G:Q/1,R,True,Q G R K,False,0.017,-,"overall,bipolar,composition"
+membrane_glycoprotein_precursor_prM,DENV2,72,T/2004 A/9,T:T/13 A:T/3,T,True,,False,-,"overall: 0.017, DENV2 vs DENV4: 0.017",-
+membrane_glycoprotein_precursor_prM,DENV2,79,C/2029 N/2,C:C/26 C:N/1,C,False,N,False,0.039,-,-
+membrane_glycoprotein_precursor_prM,DENV2,82,T/2000 M/5 P/4 A/4 K/4 I/3 E/2 R/1,T:T/15 M:T/4 A:T/4 P:T/3 I:T/3 K:T/2 E:T/1 R:T/1,T,True,M K P E R,False,0.035,-,"overall,structure,volume,composition,charge"
+membrane_glycoprotein_precursor_prM,DENV2,88,E/2016 G/10 D/3 V/2 K/1,E:E/15 E:G/9 D:E/3 E:K/1 E:V/1,E,True,K,False,-,overall: 0.035,-
+membrane_glycoprotein_precursor_prM,DENV2,121,R/2020 K/4 T/1,R:R/4 K:R/3 R:T/1,R,True,T,False,-,"overall: 0.000, DENV1 vs DENV2: 0.001",-
+membrane_glycoprotein_precursor_prM,DENV2,135,M/2014 I/5 V/1,I:M/2 M:V/1,M,True,,False,-,"overall: 0.000, DENV1 vs DENV2: 0.000",-
+membrane_glycoprotein_precursor_prM,DENV2,137,A/2006 T/5 V/4 S/4 D/1,A:A/14 A:V/3 A:T/3 A:S/1 A:D/1,A,True,A V S T D,False,-,"overall: 0.000, DENV1 vs DENV2: 0.006",-
+membrane_glycoprotein_precursor_prM,DENV2,138,I/1948 L/41 F/15 V/13 T/3,I:I/17 I:V/10 I:L/5 I:T/3 F:L/1 F:I/1 V:V/1,I,True,V I T,False,-,"overall: 0.017, DENV1 vs DENV2: 0.015","overall,volume"
+membrane_glycoprotein_precursor_prM,DENV2,142,T/2019 A/1 S/1,T:T/15 A:T/1 S:T/1,T,True,S,False,-,"overall: 0.002, DENV1 vs DENV2: 0.003",-
+membrane_glycoprotein_precursor_prM,DENV2,147,H/1349 Y/662 N/6 C/1,H:Y/23 H:H/15 Y:Y/9 N:Y/1 C:Y/1 H:N/1,H,True,Y N C H,False,-,DENV1 vs DENV2: 0.011,-
+membrane_glycoprotein_precursor_prM,DENV2,151,V/1157 A/775 I/77 T/8,V:V/17 A:V/14 A:A/12 I:V/7 A:T/2 I:I/1,V,True,,False,-,DENV1 vs DENV2: 0.019,-
+membrane_glycoprotein_precursor_prM,DENV3,1,H/972,H:H/7,H,False,,False,-,"overall: 0.000, DENV3 vs DENV4: 0.000",-
+membrane_glycoprotein_precursor_prM,DENV3,2,L/971,L:L/17,L,False,,False,-,overall: 0.034,-
+membrane_glycoprotein_precursor_prM,DENV3,3,T/971 I/1,T:T/10 I:T/1,T,True,,False,-,"overall: 0.000, DENV3 vs DENV4: 0.000",-
+membrane_glycoprotein_precursor_prM,DENV3,15,K/965 R/1 E/1,K:K/9 K:R/1 E:K/1,K,True,E,False,-,overall: 0.037,-
+membrane_glycoprotein_precursor_prM,DENV3,28,S/961 T/8 F/1 C/1,S:S/5 F:S/1 C:S/1 S:T/1,S,True,F C,False,-,"overall: 0.000, DENV1 vs DENV3: 0.001",-
+membrane_glycoprotein_precursor_prM,DENV3,72,T/968 A/3 S/1,T:T/7 A:T/3 S:T/1,T,True,,False,-,"overall: 0.017, DENV3 vs DENV4: 0.018",-
+membrane_glycoprotein_precursor_prM,DENV3,88,D/953 N/1,D:D/22 D:N/1,D,True,,False,-,"overall: 0.035, DENV1 vs DENV3: 0.038",-
+membrane_glycoprotein_precursor_prM,DENV3,121,K/960 R/5,K:K/5 K:R/3,K,True,,False,-,overall: 0.000,-
+membrane_glycoprotein_precursor_prM,DENV3,135,L/966,L:L/13,L,True,,False,-,"overall: 0.000, DENV1 vs DENV3: 0.023",-
+membrane_glycoprotein_precursor_prM,DENV3,137,L/966,L:L/14,L,True,,False,-,"overall: 0.000, DENV1 vs DENV3: 0.007",-
+membrane_glycoprotein_precursor_prM,DENV3,138,F/965,F:F/6,F,True,,False,-,overall: 0.017,-
+membrane_glycoprotein_precursor_prM,DENV3,142,Y/963 C/1,Y:Y/12 C:Y/1,Y,True,Y C,False,-,overall: 0.002,-
+membrane_glycoprotein_precursor_prM,DENV4,1,H/563 S/18 Y/6 T/2 P/2,H:S/6 ?:H/4 P:S/3 H:H/3 H:Y/3 S:S/2 H:T/2 T:T/1,H,False,Y S T,True,0.000,"overall: 0.000, DENV1 vs DENV4: 0.000, DENV2 vs DENV4: 0.000, DENV3 vs DENV4: 0.000","overall,bipolar,structure,volume,composition,charge"
+membrane_glycoprotein_precursor_prM,DENV4,2,L/616 F/1,L:L/19 ?:L/2 L:W/1 F:L/1,L,False,F,False,-,"overall: 0.034, DENV1 vs DENV4: 0.030, DENV2 vs DENV4: 0.029",overall
+membrane_glycoprotein_precursor_prM,DENV4,3,S/567 I/9 A/4 T/2 N/2 V/1,?:S/4 A:S/3 S:S/3 S:T/3 I:S/3 I:N/1 I:V/1,S,True,V N,True,0.000,"overall: 0.000, DENV1 vs DENV4: 0.000, DENV2 vs DENV4: 0.000, DENV3 vs DENV4: 0.000","overall,bipolar,structure,volume,composition,charge"
+membrane_glycoprotein_precursor_prM,DENV4,15,K/638 R/2 N/1,K:K/3 K:R/2 K:N/1,K,True,,False,-,overall: 0.037,-
+membrane_glycoprotein_precursor_prM,DENV4,28,E/639 G/1,E:E/12 E:G/1,E,True,,False,-,"overall: 0.000, DENV1 vs DENV4: 0.003",-
+membrane_glycoprotein_precursor_prM,DENV4,72,A/415 T/226,A:T/9 A:A/7 T:T/3,A,True,,False,-,"overall: 0.017, DENV2 vs DENV4: 0.017, DENV3 vs DENV4: 0.018","overall,charge"
+membrane_glycoprotein_precursor_prM,DENV4,88,E/640 D/1,E:E/8 D:E/1,E,True,,False,-,"overall: 0.035, DENV1 vs DENV4: 0.047",-
+membrane_glycoprotein_precursor_prM,DENV4,121,R/643,R:R/5,R,True,,False,-,"overall: 0.000, DENV1 vs DENV4: 0.004",-
+membrane_glycoprotein_precursor_prM,DENV4,135,L/618 S/2,L:L/15 L:S/2,L,True,S,False,-,"overall: 0.000, DENV1 vs DENV4: 0.022",-
+membrane_glycoprotein_precursor_prM,DENV4,137,G/620,G:G/8,G,True,G,False,-,"overall: 0.000, DENV1 vs DENV4: 0.020",-
+membrane_glycoprotein_precursor_prM,DENV4,138,F/620,F:F/15,F,True,,False,-,overall: 0.017,-
+membrane_glycoprotein_precursor_prM,DENV4,142,M/619,-,M,True,M,False,-,"overall: 0.002, DENV1 vs DENV4: 0.023",-

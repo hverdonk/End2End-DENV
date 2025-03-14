@@ -1,0 +1,5 @@
+gene,clade,N,T,dN/dS,sites,nt_conserved,aa_conserved,positive_sites,negative_sites,diff_sites,BUSTED_pval,BUSTED_omega3,BUSTED_prop_sites_in_omega3,RELAX_clade_K,RELAX_overall_pval
+envelope_protein_E,DENV1,3153,4.598633517578002,0.07946072876813955,495,1,0,20,462,60,0.4929527532481134,2984.7697476824,1.9936694495795952e-05,analysis not completed,analysis not completed
+envelope_protein_E,DENV2,2893,4.681072939869492,0.05413554295090711,495,1,0,15,456,63,0.01176090888960168,17.98563817530159,0.06033058476939216,analysis not completed,analysis not completed
+envelope_protein_E,DENV3,1537,2.4609812131231945,0.05834268138203259,493,1,0,9,420,52,0.5,1,0.678411883803329,analysis not completed,analysis not completed
+envelope_protein_E,DENV4,989,1.909962651273303,0.04941721794637548,495,1,0,5,415,58,0.5,1.002318291601398,0.0,analysis not completed,analysis not completed
