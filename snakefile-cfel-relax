@@ -1,0 +1,78 @@
+import os
+
+###########
+## TOOLS ##
+###########
+hyphy = "/usr/local/bin/hyphy"
+HYPHYMP = "/usr/local/bin/HYPHYMP"
+HYPHYMPI = "/usr/local/bin/HYPHYMPI"
+LABEL = "Foreground"
+
+# Config file should specify:
+# - results_dir: Path to the directory containing the folder of codon-aware gene alignments and the folder of trees. Results will be output to the same directory, in one folder per analysis.
+# - np: Number of processes for MPI.
+configfile: "cfel-relax-config.yaml"
+
+#focal_clade = config["focal_clade"]
+INPUT_DIR = config['input_dir']
+RESULTS_DIR = config['results_dir']
+
+
+alignment_path = os.path.join(INPUT_DIR, "alignments")
+GENE_INPUTS = [f.split('-nodups')[0] for f in os.listdir(alignment_path) if f.endswith("-nodups.fasta")]
+
+# subset for testing:
+#GENE_INPUTS = GENE_INPUTS[0]
+#PARTITIONS = PARTITIONS[0]
+
+rule all:
+    input:
+        expand(os.path.join(RESULTS_DIR, "RELAX", "{gene}.RELAX.json"), gene = GENE_INPUTS),
+        expand(os.path.join(RESULTS_DIR, "contrastFEL", "{gene}.CFEL.json"), gene = GENE_INPUTS)
+
+rule relax:
+    input:
+        alignment=os.path.join(INPUT_DIR, 'alignments', "{gene}-nodups.fasta"),
+        tree=os.path.join(INPUT_DIR, 'trees', "{gene}-nodups.DENV4-fixed.nwk")
+    output:
+        result=os.path.join(RESULTS_DIR, 'RELAX', "{gene}.RELAX.json"),
+    params:
+        np=config["np"]
+    shell:
+        """
+        mkdir -p {RESULTS_DIR}/RELAX
+        
+        {HYPHYMP} RELAX CPU={params.np} \
+        --alignment {input.alignment} \
+        --tree {input.tree} \
+        --output {output.result} \
+        --mode "Group mode" \
+        --reference-group 'DENV1' \
+        --srv Yes
+        """
+
+rule cfel:
+    input:
+        alignment=os.path.join(INPUT_DIR, 'alignments', "{gene}-nodups.fasta"),
+        tree=os.path.join(INPUT_DIR, 'trees', "{gene}-nodups.DENV4-fixed.nwk")
+    output:
+        result=os.path.join(RESULTS_DIR, "contrastFEL", "{gene}.CFEL.json"),
+    params:
+        np=config["np"]
+    shell:
+        """
+        mkdir -p {RESULTS_DIR}/contrastFEL
+
+        mpirun -np {params.np} \
+        HYPHYMPI contrast-fel \
+        --alignment {input.alignment} \
+        --tree {input.tree} \
+        --output {output.result} \
+        --branch-set 'DENV1' \
+        --branch-set 'DENV2' \
+        --branch-set 'DENV3' \
+        --branch-set 'DENV4'
+        """
+
+
+

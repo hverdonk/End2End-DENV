@@ -1,0 +1,175 @@
+import os
+
+###################
+## Configuration ##
+###################
+configfile: 'config.yaml'
+
+RAW_SEQS = config['input']  # path to fasta files of unaligned gene sequences
+REF_PATHS = config['reference-genomes']  # path to fasta file with reference gene sequence 
+OUT_PATH = config['output']
+
+#ALL_SEROTYPES = glob_wildcards(REF_PATHS + "/{file}.gb").file
+PARTITIONS = ['DENV1', 'DENV2', 'DENV3', 'DENV4']
+ALL_RAW_DATASETS = ['DENV2'] # ['DENV4', 'DENV2', 'DENV3', 'DENV1']
+ALL_REF_FASTAS = glob_wildcards(f"{REF_PATHS}/{{file}}.fasta").file   # ['envelope_protein_E', 'nonstructural_protein_NS2B', 'nonstructural_protein_NS2A', ...] 
+#print(ALL_REF_FASTAS)
+
+###########
+## TOOLS ##
+###########
+hyphy = "/usr/local/bin/hyphy"
+label_tree = '/data/shares/veg/dengue/hyphy-analyses/LabelTrees/trim-label-tree.bf'
+cawlign = "/usr/local/bin/cawlign"
+iqtree = "/opt/iqtree/iqtree-1.6.6-Linux/bin/iqtree"
+
+
+# Collect all gene files dynamically
+all_gene_files = expand(REF_PATHS+"/DENV2/{gene}.fasta",  
+                        gene=ALL_REF_FASTAS)
+
+
+rule all:
+    input:
+        expand(os.path.join(OUT_PATH, 'concat', 'trees', "{gene}-nodups.{P}.nwk"), gene=ALL_REF_FASTAS, P=PARTITIONS )
+
+rule map_to_ref:
+    input: 
+        ref_gene = os.path.join(REF_PATHS, "DENV2", "{MY_GENE}.fasta")   #DENV2 as the reference 
+    output: os.path.join(OUT_PATH, "concat", "alignments", "{MY_GENE}.fasta")
+    params:
+        np = 4
+    shell:
+        """
+        mkdir -p {OUT_PATH}/concat/alignments
+        {cawlign} -t codon -s BLOSUM62 -r {input.ref_gene} "{RAW_SEQS}/denv_concat.fasta" > {output}
+        """
+
+rule remove_ambig_seqs:
+    input: os.path.join(OUT_PATH, "concat", "alignments", "{GENE}.fasta")
+    output: os.path.join(OUT_PATH, "concat", "alignments", "{GENE}-clean.fasta")
+    params:
+        np = 1
+    shell:
+        """
+        python3 filter-ambig-sequences.py -i {input}
+        """
+ 
+rule remove_dups:
+    input: os.path.join(OUT_PATH, "concat", "alignments", "{GENE}-clean.fasta")
+    output: os.path.join(OUT_PATH, "concat", "alignments", "{GENE}-nodups.fasta")
+    params:
+        np = 1
+    shell:
+        """
+        {hyphy} cln Universal {input} "Yes/No" {output}
+        """
+
+rule build_tree:
+    input: os.path.join(OUT_PATH, "concat", "alignments", "{GENE}-nodups.fasta")
+    output: os.path.join(OUT_PATH, "concat", "trees", "{GENE}-nodups.fasta.treefile")
+    params:
+        np = 4
+    shell:
+        """
+        mkdir -p {OUT_PATH}/concat/trees
+        {iqtree} -s {input} -nt 8 -m GTR+I+G
+        mv {OUT_PATH}/concat/alignments/{wildcards.GENE}-nodups.fasta.bionj {OUT_PATH}/concat/trees
+        mv {OUT_PATH}/concat/alignments/{wildcards.GENE}-nodups.fasta.ckp.gz {OUT_PATH}/concat/trees
+        mv {OUT_PATH}/concat/alignments/{wildcards.GENE}-nodups.fasta.log {OUT_PATH}/concat/trees
+        mv {OUT_PATH}/concat/alignments/{wildcards.GENE}-nodups.fasta.mldist {OUT_PATH}/concat/trees
+        mv {OUT_PATH}/concat/alignments/{wildcards.GENE}-nodups.fasta.treefile {OUT_PATH}/concat/trees #the final tree file is this one
+        mv {OUT_PATH}/concat/alignments/{wildcards.GENE}-nodups.fasta.iqtree {OUT_PATH}/concat/trees
+        """       
+#rule get_species: 
+#	input:
+#		seq = os.path.join(OUT_PATH, "concat", "alignments", "{GENE}-nodups.fasta")
+#	output:
+#		list = os.path.join(OUT_PATH, "concat", "alignments", "{GENE}-list.{P}.txt")
+#	shell:
+#		"python /data/shares/veg/dengue/get_species.py -i {input.seq} -o {output.list} -l {wildcards.P}"
+#
+#rule label_mrca1:
+#	input:
+#		in_tree = os.path.join(OUT_PATH, "concat", "trees", "{GENE}-nodups.fasta.treefile"),
+#		list = os.path.join(OUT_PATH, "concat", "alignments", "{GENE}-list.DENV1.txt")
+#	output:
+#		out_tree = os.path.join(OUT_PATH, 'concat', 'trees', '{GENE}-nodups.fasta.mrca1.nwk')
+#	shell:
+#		'{hyphy} hyphy-analyses/LabelTrees/label-mrca.bf --tree {input.in_tree} --taxa $(cat {input.list}) --output {output.out_tree} --label MRCA_DENV1'
+
+
+rule label_tree1:
+    input: 
+        in_tree = os.path.join(OUT_PATH, "concat", "trees", "{GENE}-nodups.fasta.treefile"),
+    output:
+        out_tree = os.path.join(OUT_PATH, "concat", "trees", "{GENE}-nodups.DENV1.nwk")
+    params:
+        np = 1
+    shell:
+        """
+        {hyphy} hyphy-analyses/LabelTrees/label-tree.bf \
+        --tree {input.in_tree} \
+        --regexp 'DENV1' \
+        --label 'DENV1' \
+        --output {output.out_tree} \
+        --internal-nodes 'All descendants' \
+        --leaf-nodes 'Skip'
+        """
+
+
+rule label_tree2:
+    input: 
+        in_tree = os.path.join(OUT_PATH, "concat", "trees", "{GENE}-nodups.DENV1.nwk")
+    output:
+        out_tree = os.path.join(OUT_PATH, "concat", "trees", "{GENE}-nodups.DENV2.nwk")
+    params:
+        np = 1
+    shell:
+        """
+        {hyphy} hyphy-analyses/LabelTrees/label-tree.bf \
+        --tree {input.in_tree} \
+        --regexp 'DENV2' \
+        --label 'DENV2' \
+        --output {output.out_tree} \
+        --internal-nodes 'All descendants' \
+        --leaf-nodes 'Skip'
+        """
+
+
+rule label_tree3:
+    input: 
+        in_tree = os.path.join(OUT_PATH, "concat", "trees", "{GENE}-nodups.DENV2.nwk")
+    output:
+        out_tree = os.path.join(OUT_PATH, "concat", "trees", "{GENE}-nodups.DENV3.nwk")
+    params:
+        np = 1
+    shell:
+        """
+        {hyphy} hyphy-analyses/LabelTrees/label-tree.bf \
+        --tree {input.in_tree} \
+        --regexp 'DENV3' \
+        --label 'DENV3' \
+        --output {output.out_tree} \
+        --internal-nodes 'All descendants' \
+        --leaf-nodes 'Skip'
+        """
+
+rule label_tree4:
+    input: 
+        in_tree = os.path.join(OUT_PATH, "concat", "trees", "{GENE}-nodups.DENV3.nwk")
+    output:
+        out_tree = os.path.join(OUT_PATH, "concat", "trees", "{GENE}-nodups.DENV4.nwk")
+    params:
+        np = 1
+    shell:
+        """
+        {hyphy} hyphy-analyses/LabelTrees/label-tree.bf \
+        --tree {input.in_tree} \
+        --regexp 'DENV4' \
+        --label 'DENV4' \
+        --output {output.out_tree} \
+        --internal-nodes 'All descendants' \
+        --leaf-nodes 'Skip'
+        """
+

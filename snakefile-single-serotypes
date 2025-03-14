@@ -1,0 +1,103 @@
+import os
+
+###################
+## Configuration ##
+###################
+configfile: 'config.yaml'
+
+RAW_SEQS = config['input']  # path to fasta files of unaligned gene sequences
+REF_PATHS = config['reference-genomes']  # path to fasta file with reference gene sequence 
+OUT_PATH = config['output']
+
+#ALL_SEROTYPES = glob_wildcards(REF_PATHS + "/{file}.gb").file
+ALL_RAW_DATASETS = glob_wildcards(RAW_SEQS + "/{file}.fasta").file
+ALL_RAW_DATASETS = [x.split('_')[0] for x in ALL_RAW_DATASETS] # ['DENV4', 'DENV2', 'DENV3', 'DENV1']
+ALL_REF_FASTAS = [
+    file
+    for dataset in ALL_RAW_DATASETS
+    for file in glob_wildcards(f"{REF_PATHS}/{dataset}/{{file}}.fasta").file
+] # ['envelope_protein_E', 'nonstructural_protein_NS2B', 'nonstructural_protein_NS2A', ...] 
+
+###########
+## TOOLS ##
+###########
+hyphy = "/usr/local/bin/hyphy"
+lable_tree = '/data/shares/veg/dengue/hyphy-analyses/LabelTrees/label-tree.bf'
+cawlign = "/usr/local/bin/cawlign"
+iqtree = "/opt/iqtree/iqtree-1.6.6-Linux/bin/iqtree"
+
+
+# Collect all gene files dynamically
+all_gene_files = expand(REF_PATHS+"/{serotype}/{gene}.fasta", 
+                        serotype=ALL_RAW_DATASETS, 
+                        #gene=glob_wildcards(REF_PATHS+"/{serotype}/{gene}.fasta").gene)
+                        gene=ALL_REF_FASTAS)
+
+
+
+rule all:
+    input:
+        expand(OUT_PATH + "/{serotype}/alignments/{gene}-nodups.fasta",
+                        serotype=ALL_RAW_DATASETS,
+                        gene=ALL_REF_FASTAS), 
+        expand(OUT_PATH + "/{serotype}/trees/{gene}-nodups.fasta.treefile", 
+                        serotype=ALL_RAW_DATASETS, 
+                        gene=ALL_REF_FASTAS)
+
+#rule get_genes:
+#    # input: the four reference serotype genomes for dengue, list of the important CDSs in the reference genome
+#    # outputs a bunch of files with the reference gene sequences for each serotype
+#    input:
+#        ref_genome = REF_PATHS + '/{SEROTYPE}.gb"
+#        valid_CDS = REF_PATHS + '/{SEROTYPE}.txt"
+#    output:
+#        dynamic(REF_PATHS + "/{SEROTYPE}/{gene}.fasta")  # Dynamically track all gene files
+#    shell:
+#        """
+#        mkdir -p {wildcards.SEROTYPE}
+#        python3 get_genes.py [ARGS] 
+#        """
+
+rule map_to_ref:
+    input: 
+        raw_data = RAW_SEQS + "/{SEROTYPE}_clean.fasta", 
+        ref_gene = REF_PATHS + "/{SEROTYPE}/{gene}.fasta" 
+    output: os.path.join(OUT_PATH, "{SEROTYPE}", "alignments", "{gene}.fasta")
+    threads: 4
+    shell:
+        """
+        mkdir -p {OUT_PATH}/{wildcards.SEROTYPE}/alignments
+        {cawlign} -t codon -s BLOSUM62 -r {input.ref_gene} "{input.raw_data}" > {output}
+        """
+rule remove_ambig_seqs:
+    input: os.path.join(OUT_PATH, "{SEROTYPE}", "alignments", "{gene}.fasta")
+    output: os.path.join(OUT_PATH, "{SEROTYPE}", "alignments", "{gene}-clean.fasta")
+    shell:
+        """
+        python3 filter-ambig-sequences.py -i {input}
+        """
+ 
+rule remove_dups:
+    input: os.path.join(OUT_PATH, "{SEROTYPE}", "alignments", "{gene}-clean.fasta")
+    output: os.path.join(OUT_PATH, "{SEROTYPE}", "alignments", "{gene}-nodups.fasta")
+    shell:
+        """
+        {hyphy} cln Universal {input} "Yes/No" {output}
+        """
+
+rule build_tree:
+    input: os.path.join(OUT_PATH, "{SEROTYPE}", "alignments", "{gene}-nodups.fasta")
+    output: os.path.join(OUT_PATH, "{SEROTYPE}", "trees", "{gene}-nodups.fasta.treefile")
+    shell:
+        """
+        mkdir -p {OUT_PATH}/{wildcards.SEROTYPE}/trees
+        {iqtree} -s {input} -nt 8 -m GTR+I+G
+        mv {OUT_PATH}/{wildcards.SEROTYPE}/alignments/{wildcards.gene}-nodups.fasta.bionj {OUT_PATH}/{wildcards.SEROTYPE}/trees
+        mv {OUT_PATH}/{wildcards.SEROTYPE}/alignments/{wildcards.gene}-nodups.fasta.ckp.gz {OUT_PATH}/{wildcards.SEROTYPE}/trees
+        mv {OUT_PATH}/{wildcards.SEROTYPE}/alignments/{wildcards.gene}-nodups.fasta.log {OUT_PATH}/{wildcards.SEROTYPE}/trees
+        mv {OUT_PATH}/{wildcards.SEROTYPE}/alignments/{wildcards.gene}-nodups.fasta.mldist {OUT_PATH}/{wildcards.SEROTYPE}/trees
+        mv {OUT_PATH}/{wildcards.SEROTYPE}/alignments/{wildcards.gene}-nodups.fasta.treefile {OUT_PATH}/{wildcards.SEROTYPE}/trees #the final tree file is this one
+        mv {OUT_PATH}/{wildcards.SEROTYPE}/alignments/{wildcards.gene}-nodups.fasta.iqtree {OUT_PATH}/{wildcards.SEROTYPE}/trees
+        """
+
+

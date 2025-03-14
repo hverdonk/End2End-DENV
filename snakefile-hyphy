@@ -1,0 +1,131 @@
+import os
+
+###########
+## TOOLS ##
+###########
+hyphy = "/usr/local/bin/hyphy"
+HYPHYMPI = "/usr/local/bin/HYPHYMPI"
+
+# Config file should specify:
+# - results_dir: Path to the directory containing the folder of codon-aware gene alignments and the folder of trees. Results will be output to the same directory, in one folder per analysis.
+# - np: Number of processes for MPI.
+configfile: "selection-analysis-config.yaml"
+
+def get_all_inputs():
+    """Precompute all inputs for all types and genes."""
+    inputs = {
+        "FEL": [],
+        "MEME": [],
+        "BUSTED": [],
+        "PRIME": []
+    }
+    for type_ in config["type"]:
+        alignment_path = os.path.join(config["results_dir"], type_, "alignments")
+        gene_files = [f for f in os.listdir(alignment_path) if f.endswith("-nodups.fasta")]
+        genes = [os.path.splitext(f)[0].replace("-nodups", "") for f in gene_files]
+        for gene in genes:
+            inputs["FEL"].append(f"{config['results_dir']}/{type_}/FEL/{gene}.FEL.json")
+            inputs["MEME"].append(f"{config['results_dir']}/{type_}/MEME/{gene}.MEME.json")
+            inputs["BUSTED"].append(f"{config['results_dir']}/{type_}/BUSTED/{gene}.BUSTEDS.json")
+            inputs["PRIME"].append(f"{config['results_dir']}/{type_}/PRIME/{gene}.PRIME.json")
+    return inputs
+
+all_inputs = get_all_inputs()
+
+rule all:
+    input:
+        all_inputs["FEL"],
+        all_inputs["MEME"],
+        all_inputs["BUSTED"],
+        all_inputs["PRIME"]
+
+rule run_fel:
+    input:
+        alignment="{results_dir}/{type}/alignments/{gene}-nodups.fasta",
+        tree="{results_dir}/{type}/trees/{gene}-nodups.fasta.treefile"
+    output:
+        result="{results_dir}/{type}/FEL/{gene}.FEL.json",
+        model_fit_file="{results_dir}/{type}/support-files/{gene}.FEL.fit"
+    params:
+        np=config["np"]
+    shell:
+        """
+        mkdir -p {wildcards.results_dir}/{wildcards.type}/FEL
+        mkdir -p {wildcards.results_dir}/{wildcards.type}/support-files
+
+        mpirun -np {params.np} {HYPHYMPI} fel \
+            --alignment {input.alignment} \
+            --tree {input.tree} \
+            --branches 'Internal' \
+            --intermediate-fits {output.model_fit_file} \
+            --output {output.result}
+        """
+
+rule run_meme:
+    input:
+        alignment="{results_dir}/{type}/alignments/{gene}-nodups.fasta",
+        tree="{results_dir}/{type}/trees/{gene}-nodups.fasta.treefile"
+    output:
+        result="{results_dir}/{type}/MEME/{gene}.MEME.json",
+        model_fit_file="{results_dir}/{type}/support-files/{gene}.MEME.fit"
+    params:
+        np=config["np"]
+    shell:
+        """
+        mkdir -p {wildcards.results_dir}/{wildcards.type}/MEME
+        mkdir -p {wildcards.results_dir}/{wildcards.type}/support-files
+
+        mpirun -np {params.np} {HYPHYMPI} meme \
+            --alignment {input.alignment} \
+            --tree {input.tree} \
+            --branches 'Internal' \
+            --intermediate-fits {output.model_fit_file} \
+            --output {output.result}
+        """
+
+rule run_busted:
+    input:
+        alignment="{results_dir}/{type}/alignments/{gene}-nodups.fasta",
+        tree="{results_dir}/{type}/trees/{gene}-nodups.fasta.treefile"
+    output:
+        result="{results_dir}/{type}/BUSTED/{gene}.BUSTEDS.json",
+        model_fit_file="{results_dir}/{type}/support-files/{gene}.BUSTEDS.fit"
+    params:
+        np=config["np"]
+    shell:
+        """
+        mkdir -p {wildcards.results_dir}/{wildcards.type}/BUSTED
+        mkdir -p {wildcards.results_dir}/{wildcards.type}/support-files
+
+        {hyphy} busted \
+            --alignment {input.alignment} \
+            --tree {input.tree} \
+            --branches 'Internal' \
+            --intermediate-fits {output.model_fit_file} \
+            --error-sink Yes \
+            --output {output.result}
+        """
+
+rule run_prime:
+    input:
+        alignment="{results_dir}/{type}/alignments/{gene}-nodups.fasta",
+        tree="{results_dir}/{type}/trees/{gene}-nodups.fasta.treefile"
+    output:
+        result="{results_dir}/{type}/PRIME/{gene}.PRIME.json",
+        model_fit_file="{results_dir}/{type}/support-files/{gene}.PRIME.fit"
+    params:
+        np=config["np"]
+    shell:
+        """
+        mkdir -p {wildcards.results_dir}/{wildcards.type}/PRIME
+        mkdir -p {wildcards.results_dir}/{wildcards.type}/support-files
+
+        mpirun -np {params.np} {HYPHYMPI} prime \
+            --alignment {input.alignment} \
+            --tree {input.tree} \
+            --branches Internal \
+            --intermediate-fits {output.model_fit_file} \
+            --output {output.result}
+        """
+
+
