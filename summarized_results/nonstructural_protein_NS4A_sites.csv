@@ -1,57 +1,57 @@
-gene,clade,site,composition,substitutions,majority_residue,diff_majority_residue,unique_aa,intensified_positive_selection,meme_marker,cfel_marker,prime_marker
-nonstructural_protein_NS4A,DENV1,1,V/1829 I/42 G/3 S/1,I:V/23 V:V/21 G:V/2 S:V/1,V,True,S G,False,-,"overall: 0.011, DENV1 vs DENV2: 0.008, DENV1 vs DENV3: 0.029",overall
-nonstructural_protein_NS4A,DENV1,19,R/1792 K/82,K:R/23 R:R/10 K:K/4,R,True,,False,-,"overall: 0.001, DENV1 vs DENV2: 0.001, DENV1 vs DENV3: 0.016",overall
-nonstructural_protein_NS4A,DENV1,22,N/1863 S/7 K/3 T/1,N:N/24 N:S/7 K:N/3 N:T/1,N,True,K,False,-,"overall: 0.014, DENV1 vs DENV3: 0.008",-
-nonstructural_protein_NS4A,DENV1,38,R/1106 K/768,K:R/4 K:K/4 R:R/2,R,True,,False,-,DENV1 vs DENV2: 0.018,-
-nonstructural_protein_NS4A,DENV1,44,M/1841 L/24 I/18 V/7,I:M/11 M:V/5 L:M/2 L:L/1,M,True,I,False,-,"overall: 0.015, DENV1 vs DENV2: 0.009",-
-nonstructural_protein_NS4A,DENV1,54,L/1875 I/10 S/5 C/3 M/1 F/1,L:L/41 L:S/4 C:L/2 L:M/1 F:L/1 I:L/1,L,False,C,False,0.003,-,"overall,bipolar,structure,volume,composition,charge"
-nonstructural_protein_NS4A,DENV1,77,L/1887,L:L/38,L,True,,False,-,"overall: 0.000, DENV1 vs DENV2: 0.041, DENV1 vs DENV4: 0.000",-
-nonstructural_protein_NS4A,DENV1,86,C/1889 S/1,C:C/20 C:S/1,C,True,,False,-,"overall: 0.020, DENV1 vs DENV4: 0.028",-
-nonstructural_protein_NS4A,DENV1,92,V/1173 A/676 T/17 I/16 M/1 G/1,A:V/38 V:V/13 I:V/7 A:A/5 A:T/5 I:T/1 M:V/1 T:V/1 G:V/1,V,True,M,False,-,"overall: 0.001, DENV1 vs DENV2: 0.012, DENV1 vs DENV3: 0.016, DENV1 vs DENV4: 0.003",-
-nonstructural_protein_NS4A,DENV1,96,M/1727 V/105 I/30 T/20 A/6,I:M/12 M:T/9 M:V/5 A:V/2,M,True,A,False,-,"overall: 0.048, DENV1 vs DENV3: 0.012",-
-nonstructural_protein_NS4A,DENV1,98,S/1839 N/31 G/14 C/5,N:S/15 S:S/11 C:S/3 G:S/3 G:G/1,S,True,S G C,False,-,"overall: 0.020, DENV1 vs DENV2: 0.018",-
-nonstructural_protein_NS4A,DENV1,99,V/1888,V:V/18,V,True,,False,-,"overall: 0.004, DENV1 vs DENV3: 0.007",-
-nonstructural_protein_NS4A,DENV1,109,I/1880 T/5 V/3 M/2,I:T/5 I:V/3 I:I/3 I:M/2,I,True,,False,-,overall: 0.026,-
-nonstructural_protein_NS4A,DENV1,116,V/1887 E/1,V:V/10 E:V/1,V,False,E,False,-,DENV1 vs DENV4: 0.049,-
-nonstructural_protein_NS4A,DENV2,1,L/1814 P/1,L:L/38 L:P/1,L,True,P,False,-,"overall: 0.011, DENV1 vs DENV2: 0.008",-
-nonstructural_protein_NS4A,DENV2,19,K/1804,K:K/16,K,True,,False,-,"overall: 0.001, DENV1 vs DENV2: 0.001",-
-nonstructural_protein_NS4A,DENV2,22,N/1100 D/701 S/2 E/1,N:N/19 D:N/15 D:D/14 N:S/2 D:E/1,N,True,E D,False,-,overall: 0.014,-
-nonstructural_protein_NS4A,DENV2,38,R/1676 K/127 G/1 S/1 L/1,K:R/25 R:R/17 K:K/3 G:R/1 R:S/1 L:R/1,R,True,S L G,False,-,DENV1 vs DENV2: 0.018,overall
-nonstructural_protein_NS4A,DENV2,44,L/1795 A/1,L:L/34 A:L/1,L,True,A,False,-,"overall: 0.015, DENV1 vs DENV2: 0.009",-
-nonstructural_protein_NS4A,DENV2,67,I/1823 V/3 T/1,I:I/22 I:V/3 I:T/1,I,True,,False,-,DENV2 vs DENV3: 0.033,-
-nonstructural_protein_NS4A,DENV2,72,M/1828 V/1,M:V/1,M,True,,False,-,DENV2 vs DENV3: 0.045,-
-nonstructural_protein_NS4A,DENV2,77,I/1694 V/129 M/8 L/1,I:V/17 I:I/5 I:M/4 V:V/4 I:L/1,I,True,,False,-,"overall: 0.000, DENV1 vs DENV2: 0.041, DENV2 vs DENV4: 0.014",-
-nonstructural_protein_NS4A,DENV2,86,C/1832 G/1,C:C/17 C:G/1,C,True,G,False,-,"overall: 0.020, DENV2 vs DENV4: 0.021",-
-nonstructural_protein_NS4A,DENV2,89,T/1834 A/1,T:T/25 A:T/1,T,True,,False,-,DENV2 vs DENV3: 0.012,-
-nonstructural_protein_NS4A,DENV2,92,I/1684 V/124 T/22 S/1,I:I/21 I:V/16 I:T/9 V:V/1 I:S/1,I,True,,False,-,"overall: 0.001, DENV1 vs DENV2: 0.012",-
-nonstructural_protein_NS4A,DENV2,96,Y/1806 H/18 C/4 D/1 N/1,Y:Y/25 H:Y/10 C:Y/4 D:Y/1 N:Y/1,Y,True,Y N C H D,False,-,overall: 0.048,-
-nonstructural_protein_NS4A,DENV2,98,Q/1832 K/1 L/1 E/1,Q:Q/13 K:Q/1 L:Q/1 E:Q/1,Q,True,L,False,-,"overall: 0.020, DENV1 vs DENV2: 0.018",-
-nonstructural_protein_NS4A,DENV2,99,I/1834 V/1 P/1,I:I/4 I:V/1 I:P/1,I,True,P,False,-,"overall: 0.004, DENV2 vs DENV3: 0.002",-
-nonstructural_protein_NS4A,DENV2,109,I/1839 T/1,I:T/1,I,True,,False,-,"overall: 0.026, DENV2 vs DENV3: 0.007",-
-nonstructural_protein_NS4A,DENV2,116,V/1831 G/1 L/1 A/1,V:V/34 G:V/1 L:V/1 A:V/1,V,False,G L,False,-,DENV2 vs DENV4: 0.040,-
-nonstructural_protein_NS4A,DENV3,1,I/860,I:I/20,I,True,,False,-,"overall: 0.011, DENV1 vs DENV3: 0.029",-
-nonstructural_protein_NS4A,DENV3,19,R/859 K/1 T/1,K:R/1 R:T/1 R:R/1,R,True,T,False,-,"overall: 0.001, DENV1 vs DENV3: 0.016",-
-nonstructural_protein_NS4A,DENV3,22,N/831 S/26 T/2,N:N/12 N:S/9 N:T/2,N,True,,False,-,"overall: 0.014, DENV1 vs DENV3: 0.008, DENV3 vs DENV4: 0.017",-
-nonstructural_protein_NS4A,DENV3,44,V/858 M/1,V:V/6 M:V/1,V,True,,False,-,overall: 0.015,-
-nonstructural_protein_NS4A,DENV3,67,A/833 V/30 T/1,A:V/14 A:A/11 A:T/1 V:V/1,A,True,,False,-,DENV2 vs DENV3: 0.033,-
-nonstructural_protein_NS4A,DENV3,72,I/849 V/8 M/5 L/2,I:V/3 I:M/3 I:L/1,I,True,I,False,-,DENV2 vs DENV3: 0.045,-
-nonstructural_protein_NS4A,DENV3,77,I/798 V/62 L/1 D/1,I:V/2 V:V/2 I:I/2 I:L/1 D:I/1,I,True,D,False,-,"overall: 0.000, DENV3 vs DENV4: 0.023",-
-nonstructural_protein_NS4A,DENV3,86,C/863,C:C/10,C,True,,False,-,overall: 0.020,-
-nonstructural_protein_NS4A,DENV3,89,A/578 V/278 T/4,A:V/9 A:A/6 V:V/4 A:T/3,A,True,,False,-,DENV2 vs DENV3: 0.012,-
-nonstructural_protein_NS4A,DENV3,92,G/854 S/5 C/2,G:G/17 G:S/4 C:G/2,G,True,C,False,-,"overall: 0.001, DENV1 vs DENV3: 0.016",-
-nonstructural_protein_NS4A,DENV3,96,M/859 I/2 T/1 L/1,I:M/2 M:T/1 L:M/1,M,True,L,False,-,"overall: 0.048, DENV1 vs DENV3: 0.012",-
-nonstructural_protein_NS4A,DENV3,98,E/451 D/408 N/1 A/1,D:E/3 D:D/3 D:N/1 E:E/1 A:E/1,E,True,A D,False,-,overall: 0.020,-
-nonstructural_protein_NS4A,DENV3,99,I/519 V/339,I:V/13 I:I/8 V:V/5,I,True,,False,-,"overall: 0.004, DENV1 vs DENV3: 0.007, DENV2 vs DENV3: 0.002",overall
-nonstructural_protein_NS4A,DENV3,109,V/838 I/26,V:V/11 I:V/6,V,True,,False,-,"overall: 0.026, DENV2 vs DENV3: 0.007",-
-nonstructural_protein_NS4A,DENV4,1,I/552 T/7 L/7 V/2 M/1,I:T/4 I:L/3 I:M/1 I:I/1 I:V/1 L:L/1,I,True,T M,False,-,overall: 0.011,-
-nonstructural_protein_NS4A,DENV4,19,R/519 K/49,R:R/3 K:R/3,R,True,,False,-,overall: 0.001,-
-nonstructural_protein_NS4A,DENV4,22,L/565 H/1 V/1,L:L/14 H:L/1 L:V/1,L,True,V L H,False,-,"overall: 0.014, DENV3 vs DENV4: 0.017",-
-nonstructural_protein_NS4A,DENV4,44,L/569,L:L/16,L,True,,False,-,overall: 0.015,-
-nonstructural_protein_NS4A,DENV4,77,I/514 M/53 L/3,I:M/15 I:L/1,I,True,,False,-,"overall: 0.000, DENV1 vs DENV4: 0.000, DENV2 vs DENV4: 0.014, DENV3 vs DENV4: 0.023","overall,bipolar,structure,composition,charge"
-nonstructural_protein_NS4A,DENV4,86,A/423 T/144 S/2 I/1,A:A/8 A:T/3 T:T/2 A:S/1 I:T/1,A,True,I A T,False,-,"overall: 0.020, DENV1 vs DENV4: 0.028, DENV2 vs DENV4: 0.021",-
-nonstructural_protein_NS4A,DENV4,92,G/566 S/1 A/1,G:G/4 G:S/1 A:G/1,G,True,,False,-,"overall: 0.001, DENV1 vs DENV4: 0.003",-
-nonstructural_protein_NS4A,DENV4,96,V/564 I/3 G/1,V:V/11 I:V/2 G:V/1,V,True,G,False,-,overall: 0.048,-
-nonstructural_protein_NS4A,DENV4,98,E/566 Q/1 K/1,E:E/2 E:Q/1 E:K/1,E,True,,False,-,overall: 0.020,-
-nonstructural_protein_NS4A,DENV4,99,I/564 L/2 T/1 V/1,I:I/9 I:T/1 I:L/1 I:V/1,I,True,T L,False,-,overall: 0.004,-
-nonstructural_protein_NS4A,DENV4,109,I/565 V/1 M/1,I:I/2 I:V/1 I:M/1,I,True,,False,-,overall: 0.026,-
-nonstructural_protein_NS4A,DENV4,116,V/542 A/24,V:V/5 A:V/2,V,False,,False,-,"DENV1 vs DENV4: 0.049, DENV2 vs DENV4: 0.040",-
+gene,clade,site,consensus_site,composition,substitutions,majority_residue,diff_majority_residue,unique_aa,intensified_positive_selection,meme_marker,cfel_marker,prime_marker
+nonstructural_protein_NS4A,DENV1,1,1,V/1829 I/42 G/3 S/1,I:V/23 V:V/21 G:V/2 S:V/1,V,True,G S,False,-,"overall: 0.011, DENV1 vs DENV2: 0.008, DENV1 vs DENV3: 0.029",overall
+nonstructural_protein_NS4A,DENV1,19,19,R/1792 K/82,K:R/23 R:R/10 K:K/4,R,True,,False,-,"overall: 0.001, DENV1 vs DENV2: 0.001, DENV1 vs DENV3: 0.016",overall
+nonstructural_protein_NS4A,DENV1,22,22,N/1863 S/7 K/3 T/1,N:N/24 N:S/7 K:N/3 N:T/1,N,True,K,False,-,"overall: 0.014, DENV1 vs DENV3: 0.008",-
+nonstructural_protein_NS4A,DENV1,38,38,R/1106 K/768,K:R/4 K:K/4 R:R/2,R,True,,False,-,DENV1 vs DENV2: 0.018,-
+nonstructural_protein_NS4A,DENV1,44,44,M/1841 L/24 I/18 V/7,I:M/11 M:V/5 L:M/2 L:L/1,M,True,I,False,-,"overall: 0.015, DENV1 vs DENV2: 0.009",-
+nonstructural_protein_NS4A,DENV1,54,54,L/1875 I/10 S/5 C/3 M/1 F/1,L:L/41 L:S/4 C:L/2 L:M/1 F:L/1 I:L/1,L,False,C,False,0.003,-,"overall,bipolar,structure,volume,composition,charge"
+nonstructural_protein_NS4A,DENV1,77,77,L/1887,L:L/38,L,True,,False,-,"overall: 0.000, DENV1 vs DENV2: 0.041, DENV1 vs DENV4: 0.000",-
+nonstructural_protein_NS4A,DENV1,86,86,C/1889 S/1,C:C/20 C:S/1,C,True,,False,-,"overall: 0.020, DENV1 vs DENV4: 0.028",-
+nonstructural_protein_NS4A,DENV1,92,92,V/1173 A/676 T/17 I/16 M/1 G/1,A:V/38 V:V/13 I:V/7 A:A/5 A:T/5 I:T/1 M:V/1 T:V/1 G:V/1,V,True,M,False,-,"overall: 0.001, DENV1 vs DENV2: 0.012, DENV1 vs DENV3: 0.016, DENV1 vs DENV4: 0.003",-
+nonstructural_protein_NS4A,DENV1,96,96,M/1727 V/105 I/30 T/20 A/6,I:M/12 M:T/9 M:V/5 A:V/2,M,True,A,False,-,"overall: 0.048, DENV1 vs DENV3: 0.012",-
+nonstructural_protein_NS4A,DENV1,98,98,S/1839 N/31 G/14 C/5,N:S/15 S:S/11 C:S/3 G:S/3 G:G/1,S,True,G S C,False,-,"overall: 0.020, DENV1 vs DENV2: 0.018",-
+nonstructural_protein_NS4A,DENV1,99,99,V/1888,V:V/18,V,True,,False,-,"overall: 0.004, DENV1 vs DENV3: 0.007",-
+nonstructural_protein_NS4A,DENV1,109,109,I/1880 T/5 V/3 M/2,I:T/5 I:V/3 I:I/3 I:M/2,I,True,,False,-,overall: 0.026,-
+nonstructural_protein_NS4A,DENV1,116,116,V/1887 E/1,V:V/10 E:V/1,V,False,E,False,-,DENV1 vs DENV4: 0.049,-
+nonstructural_protein_NS4A,DENV2,1,1,L/1814 P/1,L:L/38 L:P/1,L,True,P,False,-,"overall: 0.011, DENV1 vs DENV2: 0.008",-
+nonstructural_protein_NS4A,DENV2,19,19,K/1804,K:K/16,K,True,,False,-,"overall: 0.001, DENV1 vs DENV2: 0.001",-
+nonstructural_protein_NS4A,DENV2,22,22,N/1100 D/701 S/2 E/1,N:N/19 D:N/15 D:D/14 N:S/2 D:E/1,N,True,E D,False,-,overall: 0.014,-
+nonstructural_protein_NS4A,DENV2,38,38,R/1676 K/127 G/1 S/1 L/1,K:R/25 R:R/17 K:K/3 G:R/1 R:S/1 L:R/1,R,True,G S L,False,-,DENV1 vs DENV2: 0.018,overall
+nonstructural_protein_NS4A,DENV2,44,44,L/1795 A/1,L:L/34 A:L/1,L,True,A,False,-,"overall: 0.015, DENV1 vs DENV2: 0.009",-
+nonstructural_protein_NS4A,DENV2,67,67,I/1823 V/3 T/1,I:I/22 I:V/3 I:T/1,I,True,,False,-,DENV2 vs DENV3: 0.033,-
+nonstructural_protein_NS4A,DENV2,72,72,M/1828 V/1,M:V/1,M,True,,False,-,DENV2 vs DENV3: 0.045,-
+nonstructural_protein_NS4A,DENV2,77,77,I/1694 V/129 M/8 L/1,I:V/17 I:I/5 I:M/4 V:V/4 I:L/1,I,True,,False,-,"overall: 0.000, DENV1 vs DENV2: 0.041, DENV2 vs DENV4: 0.014",-
+nonstructural_protein_NS4A,DENV2,86,86,C/1832 G/1,C:C/17 C:G/1,C,True,G,False,-,"overall: 0.020, DENV2 vs DENV4: 0.021",-
+nonstructural_protein_NS4A,DENV2,89,89,T/1834 A/1,T:T/25 A:T/1,T,True,,False,-,DENV2 vs DENV3: 0.012,-
+nonstructural_protein_NS4A,DENV2,92,92,I/1684 V/124 T/22 S/1,I:I/21 I:V/16 I:T/9 V:V/1 I:S/1,I,True,,False,-,"overall: 0.001, DENV1 vs DENV2: 0.012",-
+nonstructural_protein_NS4A,DENV2,96,96,Y/1806 H/18 C/4 D/1 N/1,Y:Y/25 H:Y/10 C:Y/4 D:Y/1 N:Y/1,Y,True,C D H Y N,False,-,overall: 0.048,-
+nonstructural_protein_NS4A,DENV2,98,98,Q/1832 K/1 L/1 E/1,Q:Q/13 K:Q/1 L:Q/1 E:Q/1,Q,True,L,False,-,"overall: 0.020, DENV1 vs DENV2: 0.018",-
+nonstructural_protein_NS4A,DENV2,99,99,I/1834 V/1 P/1,I:I/4 I:V/1 I:P/1,I,True,P,False,-,"overall: 0.004, DENV2 vs DENV3: 0.002",-
+nonstructural_protein_NS4A,DENV2,109,109,I/1839 T/1,I:T/1,I,True,,False,-,"overall: 0.026, DENV2 vs DENV3: 0.007",-
+nonstructural_protein_NS4A,DENV2,116,116,V/1831 G/1 L/1 A/1,V:V/34 G:V/1 L:V/1 A:V/1,V,False,G L,False,-,DENV2 vs DENV4: 0.040,-
+nonstructural_protein_NS4A,DENV3,1,1,I/860,I:I/20,I,True,,False,-,"overall: 0.011, DENV1 vs DENV3: 0.029",-
+nonstructural_protein_NS4A,DENV3,19,19,R/859 K/1 T/1,K:R/1 R:T/1 R:R/1,R,True,T,False,-,"overall: 0.001, DENV1 vs DENV3: 0.016",-
+nonstructural_protein_NS4A,DENV3,22,22,N/831 S/26 T/2,N:N/12 N:S/9 N:T/2,N,True,,False,-,"overall: 0.014, DENV1 vs DENV3: 0.008, DENV3 vs DENV4: 0.017",-
+nonstructural_protein_NS4A,DENV3,44,44,V/858 M/1,V:V/6 M:V/1,V,True,,False,-,overall: 0.015,-
+nonstructural_protein_NS4A,DENV3,67,67,A/833 V/30 T/1,A:V/14 A:A/11 A:T/1 V:V/1,A,True,,False,-,DENV2 vs DENV3: 0.033,-
+nonstructural_protein_NS4A,DENV3,72,72,I/849 V/8 M/5 L/2,I:V/3 I:M/3 I:L/1,I,True,I,False,-,DENV2 vs DENV3: 0.045,-
+nonstructural_protein_NS4A,DENV3,77,77,I/798 V/62 L/1 D/1,I:V/2 V:V/2 I:I/2 I:L/1 D:I/1,I,True,D,False,-,"overall: 0.000, DENV3 vs DENV4: 0.023",-
+nonstructural_protein_NS4A,DENV3,86,86,C/863,C:C/10,C,True,,False,-,overall: 0.020,-
+nonstructural_protein_NS4A,DENV3,89,89,A/578 V/278 T/4,A:V/9 A:A/6 V:V/4 A:T/3,A,True,,False,-,DENV2 vs DENV3: 0.012,-
+nonstructural_protein_NS4A,DENV3,92,92,G/854 S/5 C/2,G:G/17 G:S/4 C:G/2,G,True,C,False,-,"overall: 0.001, DENV1 vs DENV3: 0.016",-
+nonstructural_protein_NS4A,DENV3,96,96,M/859 I/2 T/1 L/1,I:M/2 M:T/1 L:M/1,M,True,L,False,-,"overall: 0.048, DENV1 vs DENV3: 0.012",-
+nonstructural_protein_NS4A,DENV3,98,98,E/451 D/408 N/1 A/1,D:E/3 D:D/3 D:N/1 E:E/1 A:E/1,E,True,A D,False,-,overall: 0.020,-
+nonstructural_protein_NS4A,DENV3,99,99,I/519 V/339,I:V/13 I:I/8 V:V/5,I,True,,False,-,"overall: 0.004, DENV1 vs DENV3: 0.007, DENV2 vs DENV3: 0.002",overall
+nonstructural_protein_NS4A,DENV3,109,109,V/838 I/26,V:V/11 I:V/6,V,True,,False,-,"overall: 0.026, DENV2 vs DENV3: 0.007",-
+nonstructural_protein_NS4A,DENV4,1,1,I/552 T/7 L/7 V/2 M/1,I:T/4 I:L/3 I:M/1 I:I/1 I:V/1 L:L/1,I,True,T M,False,-,overall: 0.011,-
+nonstructural_protein_NS4A,DENV4,19,19,R/519 K/49,R:R/3 K:R/3,R,True,,False,-,overall: 0.001,-
+nonstructural_protein_NS4A,DENV4,22,22,L/565 H/1 V/1,L:L/14 H:L/1 L:V/1,L,True,L H V,False,-,"overall: 0.014, DENV3 vs DENV4: 0.017",-
+nonstructural_protein_NS4A,DENV4,44,44,L/569,L:L/16,L,True,,False,-,overall: 0.015,-
+nonstructural_protein_NS4A,DENV4,77,77,I/514 M/53 L/3,I:M/15 I:L/1,I,True,,False,-,"overall: 0.000, DENV1 vs DENV4: 0.000, DENV2 vs DENV4: 0.014, DENV3 vs DENV4: 0.023","overall,bipolar,structure,composition,charge"
+nonstructural_protein_NS4A,DENV4,86,86,A/423 T/144 S/2 I/1,A:A/8 A:T/3 T:T/2 A:S/1 I:T/1,A,True,T I A,False,-,"overall: 0.020, DENV1 vs DENV4: 0.028, DENV2 vs DENV4: 0.021",-
+nonstructural_protein_NS4A,DENV4,92,92,G/566 S/1 A/1,G:G/4 G:S/1 A:G/1,G,True,,False,-,"overall: 0.001, DENV1 vs DENV4: 0.003",-
+nonstructural_protein_NS4A,DENV4,96,96,V/564 I/3 G/1,V:V/11 I:V/2 G:V/1,V,True,G,False,-,overall: 0.048,-
+nonstructural_protein_NS4A,DENV4,98,98,E/566 Q/1 K/1,E:E/2 E:Q/1 E:K/1,E,True,,False,-,overall: 0.020,-
+nonstructural_protein_NS4A,DENV4,99,99,I/564 L/2 T/1 V/1,I:I/9 I:T/1 I:L/1 I:V/1,I,True,T L,False,-,overall: 0.004,-
+nonstructural_protein_NS4A,DENV4,109,109,I/565 V/1 M/1,I:I/2 I:V/1 I:M/1,I,True,,False,-,overall: 0.026,-
+nonstructural_protein_NS4A,DENV4,116,116,V/542 A/24,V:V/5 A:V/2,V,False,,False,-,"DENV1 vs DENV4: 0.049, DENV2 vs DENV4: 0.040",-

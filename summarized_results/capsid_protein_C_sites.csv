@@ -1,29 +1,29 @@
-gene,clade,site,composition,substitutions,majority_residue,diff_majority_residue,unique_aa,intensified_positive_selection,meme_marker,cfel_marker,prime_marker
-capsid_protein_C,DENV1,9,R/982 Q/22 K/3 N/2 D/1,R:R/10 Q:R/5 K:Q/1 D:R/1 N:R/1 N:N/1,R,True,Q D,False,0.042,-,overall
-capsid_protein_C,DENV1,34,K/1172 R/3 N/1 E/1,K:K/3 K:R/3 K:N/1 E:K/1,K,True,N,False,-,"overall: 0.000, DENV1 vs DENV3: 0.010",-
-capsid_protein_C,DENV1,38,S/1165 L/11 N/2 P/1,L:S/5 S:S/4 P:S/1 N:S/1 N:N/1,S,True,L P,False,0.002,-,overall
-capsid_protein_C,DENV1,45,L/1083 M/92 F/3 V/1,L:L/29 L:M/8 F:L/1 L:V/1,L,True,,False,-,DENV1 vs DENV2: 0.022,overall
-capsid_protein_C,DENV1,69,G/674 S/502 R/2 T/1 D/1 N/1,G:S/17 G:G/8 S:S/5 R:S/2 S:T/1 D:G/1 N:S/1,G,False,S T N,False,-,"overall: 0.002, DENV1 vs DENV2: 0.002, DENV1 vs DENV3: 0.040",overall
-capsid_protein_C,DENV1,74,N/1001 S/178 D/2 G/1,N:N/8 N:S/8 D:N/2 G:S/1 S:S/1,N,True,D G,False,-,"overall: 0.027, DENV1 vs DENV2: 0.009",-
-capsid_protein_C,DENV1,92,N/1160 S/14 D/4 Y/2 I/1,N:N/27 N:S/8 D:N/3 N:Y/2 I:N/1,N,True,I,False,-,DENV1 vs DENV2: 0.018,-
-capsid_protein_C,DENV1,93,I/1143 T/25 V/8 R/1 Q/1 L/1,I:T/10 I:V/6 I:I/5 I:R/1 I:Q/1 I:L/1,I,False,V Q R L,False,-,"overall: 0.018, DENV1 vs DENV2: 0.015",-
-capsid_protein_C,DENV1,99,R/1112 K/62 S/1,K:R/11 R:S/1 R:R/1,R,True,S,False,-,DENV1 vs DENV2: 0.041,-
-capsid_protein_C,DENV2,6,K/1119 E/2 R/1,E:K/2 K:K/1 K:R/1,K,False,E,False,-,DENV2 vs DENV4: 0.030,-
-capsid_protein_C,DENV2,8,R/796 K/326 G/4 E/2 S/2 I/1 W/1,K:R/21 E:K/2 K:K/2 G:R/2 I:K/1 R:R/1 G:G/1 R:W/1 R:S/1,R,True,I S K E W,False,0.034,-,-
-capsid_protein_C,DENV2,34,L/1221 F/5 I/1,L:L/17 F:L/5 I:L/1,L,True,F L,False,-,"overall: 0.000, DENV2 vs DENV3: 0.000, DENV2 vs DENV4: 0.014",-
-capsid_protein_C,DENV2,45,L/1228 G/1,L:L/28 G:L/1,L,True,G,False,-,DENV1 vs DENV2: 0.022,-
-capsid_protein_C,DENV2,69,G/1229 R/1,G:G/4 G:R/1,G,False,,False,-,"overall: 0.002, DENV1 vs DENV2: 0.002",-
-capsid_protein_C,DENV2,74,S/1220 L/4 P/2 T/1,S:S/6 L:S/4 P:S/2 S:T/1,S,True,,False,-,"overall: 0.027, DENV1 vs DENV2: 0.009",-
-capsid_protein_C,DENV2,92,N/1223 D/2 T/1 S/1 Y/1,N:N/13 D:N/2 N:T/1 N:S/1 N:Y/1,N,True,T,False,-,DENV1 vs DENV2: 0.018,-
-capsid_protein_C,DENV2,93,I/1227 T/2,I:I/11 I:T/2,I,False,,False,-,"overall: 0.018, DENV1 vs DENV2: 0.015",-
-capsid_protein_C,DENV2,99,R/1227 K/1,R:R/14 K:R/1,R,True,,False,-,DENV1 vs DENV2: 0.041,-
-capsid_protein_C,DENV3,9,K/531 R/7,K:R/5 K:K/1,K,True,,False,0.013,-,-
-capsid_protein_C,DENV3,34,R/290 K/261 E/1,K:R/10 K:K/2 R:R/1 E:K/1,R,True,,False,-,"overall: 0.000, DENV1 vs DENV3: 0.010, DENV2 vs DENV3: 0.000",-
-capsid_protein_C,DENV3,69,G/556 A/1,G:G/7 A:G/1,G,False,A,False,-,"overall: 0.002, DENV1 vs DENV3: 0.040",-
-capsid_protein_C,DENV3,74,S/551 P/2 L/1,S:S/12 P:S/2 L:S/1,S,True,,False,-,overall: 0.027,-
-capsid_protein_C,DENV3,93,I/549 T/3,I:I/11 I:T/3,I,False,,False,-,overall: 0.018,-
-capsid_protein_C,DENV4,5,K/359 R/11,K:R/3,K,False,,True,0.021,DENV2 vs DENV4: 0.030,-
-capsid_protein_C,DENV4,33,T/359 I/9 S/3 A/2,T:T/7 I:T/5 A:T/2 S:T/1,T,True,S A T,False,-,"overall: 0.000, DENV2 vs DENV4: 0.014",-
-capsid_protein_C,DENV4,68,G/372 D/1 R/1,D:G/1 G:R/1 G:G/1,G,False,,False,-,overall: 0.002,-
-capsid_protein_C,DENV4,73,N/369 S/4 T/1,N:N/11 N:S/3 N:T/1,N,True,,False,-,overall: 0.027,-
-capsid_protein_C,DENV4,92,I/369 T/5 F/1,I:T/5 F:I/1 I:I/1,I,False,F,False,-,overall: 0.018,-
+gene,clade,site,consensus_site,composition,substitutions,majority_residue,diff_majority_residue,unique_aa,intensified_positive_selection,meme_marker,cfel_marker,prime_marker
+capsid_protein_C,DENV1,9,9,R/982 Q/22 K/3 N/2 D/1,R:R/10 Q:R/5 K:Q/1 D:R/1 N:R/1 N:N/1,R,True,Q D,False,0.042,-,overall
+capsid_protein_C,DENV1,34,34,K/1172 R/3 N/1 E/1,K:K/3 K:R/3 K:N/1 E:K/1,K,True,N,False,-,"overall: 0.000, DENV1 vs DENV3: 0.010",-
+capsid_protein_C,DENV1,38,38,S/1165 L/11 N/2 P/1,L:S/5 S:S/4 P:S/1 N:S/1 N:N/1,S,True,P L,False,0.002,-,overall
+capsid_protein_C,DENV1,45,45,L/1083 M/92 F/3 V/1,L:L/29 L:M/8 F:L/1 L:V/1,L,True,,False,-,DENV1 vs DENV2: 0.022,overall
+capsid_protein_C,DENV1,69,69,G/674 S/502 R/2 T/1 D/1 N/1,G:S/17 G:G/8 S:S/5 R:S/2 S:T/1 D:G/1 N:S/1,G,False,T S N,False,-,"overall: 0.002, DENV1 vs DENV2: 0.002, DENV1 vs DENV3: 0.040",overall
+capsid_protein_C,DENV1,74,74,N/1001 S/178 D/2 G/1,N:N/8 N:S/8 D:N/2 G:S/1 S:S/1,N,True,G D,False,-,"overall: 0.027, DENV1 vs DENV2: 0.009",-
+capsid_protein_C,DENV1,92,92,N/1160 S/14 D/4 Y/2 I/1,N:N/27 N:S/8 D:N/3 N:Y/2 I:N/1,N,True,I,False,-,DENV1 vs DENV2: 0.018,-
+capsid_protein_C,DENV1,93,93,I/1143 T/25 V/8 R/1 Q/1 L/1,I:T/10 I:V/6 I:I/5 I:R/1 I:Q/1 I:L/1,I,False,R Q L V,False,-,"overall: 0.018, DENV1 vs DENV2: 0.015",-
+capsid_protein_C,DENV1,99,99,R/1112 K/62 S/1,K:R/11 R:S/1 R:R/1,R,True,S,False,-,DENV1 vs DENV2: 0.041,-
+capsid_protein_C,DENV2,6,6,K/1119 E/2 R/1,E:K/2 K:K/1 K:R/1,K,False,E,False,-,DENV2 vs DENV4: 0.030,-
+capsid_protein_C,DENV2,8,8,R/796 K/326 G/4 E/2 S/2 I/1 W/1,K:R/21 E:K/2 K:K/2 G:R/2 I:K/1 R:R/1 G:G/1 R:W/1 R:S/1,R,True,W E I S K,False,0.034,-,-
+capsid_protein_C,DENV2,34,34,L/1221 F/5 I/1,L:L/17 F:L/5 I:L/1,L,True,L F,False,-,"overall: 0.000, DENV2 vs DENV3: 0.000, DENV2 vs DENV4: 0.014",-
+capsid_protein_C,DENV2,45,45,L/1228 G/1,L:L/28 G:L/1,L,True,G,False,-,DENV1 vs DENV2: 0.022,-
+capsid_protein_C,DENV2,69,69,G/1229 R/1,G:G/4 G:R/1,G,False,,False,-,"overall: 0.002, DENV1 vs DENV2: 0.002",-
+capsid_protein_C,DENV2,74,74,S/1220 L/4 P/2 T/1,S:S/6 L:S/4 P:S/2 S:T/1,S,True,,False,-,"overall: 0.027, DENV1 vs DENV2: 0.009",-
+capsid_protein_C,DENV2,92,92,N/1223 D/2 T/1 S/1 Y/1,N:N/13 D:N/2 N:T/1 N:S/1 N:Y/1,N,True,T,False,-,DENV1 vs DENV2: 0.018,-
+capsid_protein_C,DENV2,93,93,I/1227 T/2,I:I/11 I:T/2,I,False,,False,-,"overall: 0.018, DENV1 vs DENV2: 0.015",-
+capsid_protein_C,DENV2,99,99,R/1227 K/1,R:R/14 K:R/1,R,True,,False,-,DENV1 vs DENV2: 0.041,-
+capsid_protein_C,DENV3,9,9,K/531 R/7,K:R/5 K:K/1,K,True,,False,0.013,-,-
+capsid_protein_C,DENV3,34,34,R/290 K/261 E/1,K:R/10 K:K/2 R:R/1 E:K/1,R,True,,False,-,"overall: 0.000, DENV1 vs DENV3: 0.010, DENV2 vs DENV3: 0.000",-
+capsid_protein_C,DENV3,69,69,G/556 A/1,G:G/7 A:G/1,G,False,A,False,-,"overall: 0.002, DENV1 vs DENV3: 0.040",-
+capsid_protein_C,DENV3,74,74,S/551 P/2 L/1,S:S/12 P:S/2 L:S/1,S,True,,False,-,overall: 0.027,-
+capsid_protein_C,DENV3,93,93,I/549 T/3,I:I/11 I:T/3,I,False,,False,-,overall: 0.018,-
+capsid_protein_C,DENV4,5,6,K/359 R/11,K:R/3,K,False,,True,0.021,DENV2 vs DENV4: 0.030,-
+capsid_protein_C,DENV4,33,34,T/359 I/9 S/3 A/2,T:T/7 I:T/5 A:T/2 S:T/1,T,True,T S A,False,-,"overall: 0.000, DENV2 vs DENV4: 0.014",-
+capsid_protein_C,DENV4,68,69,G/372 D/1 R/1,D:G/1 G:R/1 G:G/1,G,False,,False,-,overall: 0.002,-
+capsid_protein_C,DENV4,73,74,N/369 S/4 T/1,N:N/11 N:S/3 N:T/1,N,True,,False,-,overall: 0.027,-
+capsid_protein_C,DENV4,92,93,I/369 T/5 F/1,I:T/5 F:I/1 I:I/1,I,False,F,False,-,overall: 0.018,-
