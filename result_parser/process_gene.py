@@ -448,6 +448,7 @@ def process_gene(gene, results_path, current_directory, site_mappings_dir, summa
                 'gene': gene,
                 'clade': clade,
                 'site': BUSTED_site_num,   # fh.get_clade_site_from_consensus_site(consensus_sites_df, formatted_gene_name, clade, consensus_site_num) + 1,
+                'consensus_site': fh.get_consensus_site_from_clade_site(BUSTED_consensus_sites_df, formatted_gene_name, clade, BUSTED_site_num),
                 'composition': pr_composition (composition[clade]),
                 'substitutions': pr_subs(substitutions["test"]) if "test" in substitutions else "-",
                 'majority_residue': focal_cons[0],

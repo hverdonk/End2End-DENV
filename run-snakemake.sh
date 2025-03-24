@@ -2,6 +2,7 @@
 
 snakemake \
 -s snakefile-cfel-relax \
+--dry-run \
 --printshellcmds \
 --keep-going \
 --rerun-incomplete \

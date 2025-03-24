@@ -33,7 +33,7 @@ if __name__ == "__main__":
     summary_fieldnames = ['gene', 'clade', 'N', 'T', 'dN/dS', 'sites', 'nt_conserved', 'aa_conserved',
                           'positive_sites', 'negative_sites', 'diff_sites',
                           'BUSTED_pval', 'BUSTED_omega3', 'BUSTED_prop_sites_in_omega3', 'RELAX_clade_K', 'RELAX_overall_pval']
-    sites_fieldnames = ['gene', 'clade', 'site', 'composition', 'substitutions', 'majority_residue', 'diff_majority_residue',
+    sites_fieldnames = ['gene', 'clade', 'site', 'consensus_site', 'composition', 'substitutions', 'majority_residue', 'diff_majority_residue',
                         'unique_aa', 'intensified_positive_selection', 'meme_marker', 'cfel_marker', 'prime_marker']
 
     genes = fh.get_genes(results_path)
